@@ -24,7 +24,7 @@ A simple project that creates a DevContainer with the following tools:
 2. Navigate to the repository
 3. sh run.sh 
 
-## Stop id
+## Stop it
 1. exit (if the current session is inside the container)
 2. docker compose down
 
