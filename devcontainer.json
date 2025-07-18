@@ -1,0 +1,19 @@
+{
+	"name": "iac",
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "iac",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"files.insertFinalNewline": true,
+				"dev.containers.copyGitConfig": false
+			},
+			"extensions": [
+				"hashicorp.terraform",
+				"hashicorp.hcl"
+			]
+		}
+	}
+}
