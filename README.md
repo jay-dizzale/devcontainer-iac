@@ -18,6 +18,10 @@ A simple project that creates a DevContainer with the following tools:
 - docker-compose & container management tool like docker
 
 
+## Configure it
+Be sure to update `docker-compose.yml` and remove the files you don't want to use in your container. 
+Also make sure to update `.zshrc` to use you own GitHub Username / Email.
+
 ## Run it
 
 1. Clone the repository

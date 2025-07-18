@@ -19,6 +19,9 @@ function gitpush() {
 }
 
 git config --global init.defaultBranch main
+git config --global user.email "5518783+jay-dizzale@users.noreply.github.com"
+git config --global user.name "Jay-Dizzale"
+
 
 # Set Global Editor
 git config --global core.editor vim
