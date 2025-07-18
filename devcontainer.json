@@ -11,8 +11,9 @@
 				"dev.containers.copyGitConfig": false
 			},
 			"extensions": [
-				"hashicorp.terraform",
-				"hashicorp.hcl"
+				"opentofu.vscode-opentofu",
+				"redhat.vscode-yaml",
+				"ExodiusStudios.comment-anchors"
 			]
 		}
 	}
