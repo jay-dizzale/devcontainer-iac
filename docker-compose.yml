@@ -7,17 +7,18 @@ services:
     container_name: iac
     hostname: iac
     ports:
-      - '3000:3000'
+      - '9999:9999'
     volumes:
       - .zshrc:/home/ubuntu/.zshrc
       - ../:/workspace
       - .zsh_history:/home/ubuntu/.zsh_history
       # Allow to use system-wide config inside container (avoids to redo a login)
       # Remove if not needed / wanted
-      - ~/.config:/home/ubuntu/.config
+      - ./.config:/home/ubuntu/.config
+     #  - ./.aws:/home/ubuntu/.aws
       - ~/.aws:/home/ubuntu/.aws
-      - ~/.azure:/home/ubuntu/.azure
+      - ./.azure:/home/ubuntu/.azure
       - ~/.spacelift:/home/ubuntu/.spacelift
-      - ~/.terraform.d:/home/ubuntu/.terraform.d
+      - ./.terraform.d:/home/ubuntu/.terraform.d
 
     command: /bin/sh -c "while sleep 100; do :; done"

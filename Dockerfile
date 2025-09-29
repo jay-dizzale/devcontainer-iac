@@ -4,7 +4,7 @@ LABEL maintainer="Jay-Dizzale <5518783+jay-dizzale@users.noreply.github.com>"
 LABEL description="Development environment for ARM architecture with tools for Terraform, GitHub CLI, Trivy, and TFLint"
 
 ## Install a set of useful tools, expand if you require more
-RUN apt update; apt install -y vim wget curl git unzip zsh gpg mandoc jq apt-transport-https gnupg lsb-release; 
+RUN apt update; apt install -y vim wget curl git unzip zsh gpg mandoc jq apt-transport-https gnupg lsb-release socat; 
 WORKDIR /tmp
 
 ADD ./scripts/ /tmp/
@@ -26,6 +26,9 @@ RUN sh /tmp/install-aws-cli.sh
 
 ## Install `az` (Azure CLI)
 RUN sh /tmp/install-azure-cli.sh
+
+## Install `spacectl` (Spacelift CLI)
+RUN sh /tmp/install-spacectl.sh
 
 ## Cleanup
 RUN rm -rf /tmp/*

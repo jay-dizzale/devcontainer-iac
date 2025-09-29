@@ -36,3 +36,6 @@ export TENV_AUTO_INSTALL=true
 
 PROMPT='%F{red}$(hostname -I)%f- %F{yellow}$(hostname)%f - %F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f 
 $ '
+
+export AWS_REGION="eu-central-1"
+
