@@ -30,6 +30,9 @@ RUN sh /tmp/install-azure-cli.sh
 ## Install `spacectl` (Spacelift CLI)
 RUN sh /tmp/install-spacectl.sh
 
+## Install `npm` (NodeJS and NPM)
+RUN sh /tmp/install-nodejs.sh
+
 ## Cleanup
 RUN rm -rf /tmp/*
 
