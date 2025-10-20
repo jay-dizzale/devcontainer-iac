@@ -274,3 +274,5 @@ $RECYCLE.BIN/
 
 # Remove if using intellij/pycharm
 .idea
+.config
+.config/*

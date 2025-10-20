@@ -39,12 +39,28 @@ RUN sh /tmp/install-spacectl.sh
 COPY ./scripts/install-nodejs.sh /tmp
 RUN sh /tmp/install-nodejs.sh
 
+## Install `trivy` (Aquasecurity Trivy)
+COPY ./scripts/install-trivy.sh /tmp
+RUN sh /tmp/install-trivy.sh
+
+## Install `java` (Amazon Corretto 21)
+COPY ./scripts/install-java.sh /tmp/
+RUN sh /tmp/install-java.sh
+
 ## Cleanup
 RUN rm -rf /tmp/*
 
 VOLUME [ "/workspace" ]
 USER ubuntu
 WORKDIR /workspace
+
+## Install `kafka` (kafka cli)
+COPY ./scripts/install-kafka.sh /home/ubuntu/install-kafka.sh
+RUN sh /home/ubuntu/install-kafka.sh ; rm /home/ubuntu/install-kafka.sh
+
+## Install `maven` 
+COPY ./scripts/install-maven.sh /home/ubuntu/install-maven.sh
+RUN sh /home/ubuntu/install-maven.sh ; rm /home/ubuntu/install-maven.sh
 
 ## ALLOW WORKSPACE DIRECTORIES EVEN IF PERMISSION DO NOT MATCH
 RUN git config --global --add safe.directory '*' ; \

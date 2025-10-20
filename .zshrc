@@ -38,4 +38,5 @@ PROMPT='%F{red}$(hostname -I)%f- %F{yellow}$(hostname)%f - %F{green}%*%f %F{blue
 $ '
 
 export AWS_REGION="eu-central-1"
-
+export PATH=~/kafka/bin:$PATH
+export PATH=~/maven/bin:$PATH

@@ -1,5 +1,5 @@
 #!/bin/sh
-export MACHINE_TYPE=$(uname -m)
+MACHINE_TYPE=$(uname -m)
 curl -sSLo "awscliv2.zip" "https://awscli.amazonaws.com/awscli-exe-linux-${MACHINE_TYPE}.zip"
 unzip awscliv2.zip
 ./aws/install
